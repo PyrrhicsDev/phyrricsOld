@@ -1,0 +1,107 @@
+[gd_scene load_steps=7 format=3 uid="uid://cl7dn12dkxqhg"]
+
+[ext_resource type="Script" path="res://Scenes/introAnimation.gd" id="1_ex0e6"]
+[ext_resource type="Texture2D" uid="uid://c6qu1pcg7gqqe" path="res://icon.svg" id="2_84w2d"]
+[ext_resource type="Texture2D" uid="uid://vxlhgja13t5d" path="res://Cutscenes/Illustration.png" id="2_ghfc0"]
+[ext_resource type="Texture2D" uid="uid://cm5qqe03lo51r" path="res://Cutscenes/Screenshot 2024-07-27 at 3.53.05 AM.png" id="5_6vvie"]
+[ext_resource type="Texture2D" uid="uid://ddvl630p3akh2" path="res://Cutscenes/cutscene2.png" id="5_wk20c"]
+[ext_resource type="FontFile" uid="uid://dnw8xo3g538g7" path="res://Bebas_Neue/BebasNeue-Regular.ttf" id="6_ahli1"]
+
+[node name="IntroAnimation" type="Node2D"]
+script = ExtResource("1_ex0e6")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 2880.0
+offset_bottom = 1800.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="Control"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="Control/CenterContainer"]
+layout_mode = 2
+texture = ExtResource("2_ghfc0")
+
+[node name="TextureRect2" type="TextureRect" parent="Control/CenterContainer"]
+layout_mode = 2
+texture = ExtResource("2_84w2d")
+
+[node name="TextureRect3" type="TextureRect" parent="Control/CenterContainer"]
+layout_mode = 2
+texture = ExtResource("5_6vvie")
+
+[node name="TextureRect4" type="TextureRect" parent="Control/CenterContainer"]
+layout_mode = 2
+texture = ExtResource("5_wk20c")
+
+[node name="MarginContainer" type="MarginContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -546.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_top = 400
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="Control/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_ahli1")
+theme_override_font_sizes/font_size = 150
+text = "You know there's nothing you do can save her."
+
+[node name="Label2" type="Label" parent="Control/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_ahli1")
+theme_override_font_sizes/font_size = 150
+text = "So why don't you just die.
+"
+
+[node name="Label3" type="Label" parent="Control/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_ahli1")
+theme_override_font_sizes/font_size = 150
+text = "Right Here. "
+
+[node name="Label4" type="Label" parent="Control/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_ahli1")
+theme_override_font_sizes/font_size = 150
+text = "Right Now."
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
